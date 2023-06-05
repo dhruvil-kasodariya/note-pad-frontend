@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import loginApi from "../../api/login.api";
 import registerApi from "../../api/register.api";
-import AuthForm from "../../componets/authForm.componet";
+import AuthForm from "../../componets/authForm/authForm.componet";
 import toast, { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";

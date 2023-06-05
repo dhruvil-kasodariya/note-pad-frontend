@@ -48,7 +48,7 @@ input {
   outline: none;
   border-radius: 5px;
 }
-button {
+/* button {
   width: 60%;
   height: 40px;
   margin: 10px auto;
@@ -67,7 +67,7 @@ button {
 }
 button:hover {
   background: #6d44b8;
-}
+} */
 .signup {
   height: 460px;
   background: #eee;

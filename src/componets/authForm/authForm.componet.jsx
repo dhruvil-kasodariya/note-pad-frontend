@@ -1,4 +1,27 @@
 import "./authForm.stlye.css";
+import styled from "styled-components";
+
+export const Button = styled.button`
+  width: 60%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    background: #6d44b8;
+  }
+`;
 
 const AuthForm = ({
   handleSignUpChange,
@@ -29,7 +52,7 @@ const AuthForm = ({
               required=""
               onChange={handleSignInChange}
             />
-            <button type="submit">Login</button>
+            <Button type="submit">Login</Button>
           </form>
         </div>
         <div className="signup">
@@ -58,7 +81,7 @@ const AuthForm = ({
               required=""
               onChange={handleSignUpChange}
             />
-            <button type="submit">Sign up</button>
+            <Button type="submit">Sign up</Button>
           </form>
         </div>
       </div>
