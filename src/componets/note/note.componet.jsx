@@ -1,6 +1,7 @@
 import "./note.style.css";
-const Note = ({ note }) => {
-  const { noteContent, noteTitle, createdAt } = note[0];
+const Note = ({ note, index }) => {
+  console.log(index);
+  const { noteContent, noteTitle, createdAt } = note;
 
   const createdAt1 = new Date(createdAt).toLocaleString();
   console.log(createdAt1);
@@ -11,7 +12,9 @@ const Note = ({ note }) => {
       <div class="row">
         <ul class="notes">
           <li>
-            <div class="rotate-1 lazur-bg">
+            <div
+              className={index === 2 ? "rotate-1 lazur-bg" : "rotate-2 red-bg"}
+            >
               <small>{createdAt1}</small>
               <h4>{noteTitle}</h4>
               <p>{noteContent}</p>
@@ -20,7 +23,7 @@ const Note = ({ note }) => {
               </a>
             </div>
           </li>
-          <li>
+          {/* <li>
             <div class="rotate-2 red-bg">
               <small>12:03:28 12-04-2014</small>
               <h4>Awesome date</h4>
@@ -45,7 +48,7 @@ const Note = ({ note }) => {
                 <i class="fa fa-trash-o "></i>
               </a>
             </div>
-          </li>
+                </li>*/}
         </ul>
       </div>
     </div>
