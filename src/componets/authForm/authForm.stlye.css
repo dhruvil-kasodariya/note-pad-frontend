@@ -36,7 +36,7 @@ label {
   cursor: pointer;
   transition: 0.5s ease-in-out;
 }
-input {
+/* input {
   width: 60%;
   height: 20px;
   background: #e0dede;
@@ -47,7 +47,7 @@ input {
   border: none;
   outline: none;
   border-radius: 5px;
-}
+} */
 /* button {
   width: 60%;
   height: 40px;

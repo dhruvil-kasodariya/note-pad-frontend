@@ -23,6 +23,19 @@ export const Button = styled.button`
   }
 `;
 
+export const Input = styled.input`
+  width: 60%;
+  height: 20px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+`;
+
 const AuthForm = ({
   handleSignUpChange,
   handleSignInChange,
@@ -32,20 +45,20 @@ const AuthForm = ({
   return (
     <div className="mainbody">
       <div className="main">
-        <input type="checkbox" id="chk" aria-hidden="true" />
+        <Input type="checkbox" id="chk" aria-hidden="true" />
         <div className="login">
           <form onSubmit={handleSignInSubmit}>
             <label for="chk" aria-hidden="true">
               Login
             </label>
-            <input
+            <Input
               type="email"
               name="useremail"
               placeholder="Email"
               required=""
               onChange={handleSignInChange}
             />
-            <input
+            <Input
               type="password"
               name="password"
               placeholder="Password"
@@ -60,21 +73,21 @@ const AuthForm = ({
             <label for="chk" aria-hidden="true">
               Sign up
             </label>
-            <input
+            <Input
               type="text"
               name="username"
               placeholder="User name"
               required=""
               onChange={handleSignUpChange}
             />
-            <input
+            <Input
               type="email"
               name="useremail"
               placeholder="Email"
               required=""
               onChange={handleSignUpChange}
             />
-            <input
+            <Input
               type="password"
               name="password"
               placeholder="Password"
