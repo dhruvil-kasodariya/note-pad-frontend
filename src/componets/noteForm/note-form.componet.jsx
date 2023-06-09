@@ -1,53 +1,54 @@
 import { Box, Card, Paper, TextField } from "@mui/material";
 import styled from "styled-components";
 import JoditEditor from "jodit-react";
+import "./note-form.style.css";
 
-const InputNote = styled.input`
-  width: 70%;
-  height: 8%;
-  border: none;
-  outline: none;
-  background: white;
-`;
+// const InputNote = styled.input`
+//   width: 70%;
+//   height: 8%;
+//   border: none;
+//   outline: none;
+//   background: white;
+// `;
 
-const InputNoteLabel = styled.label`
-  color: #fff;
-  font-size: 2.3em;
-  justify-content: center;
-  display: flex;
-  margin: 60px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-`;
+// const InputNoteLabel = styled.label`
+//   color: #fff;
+//   font-size: 2.3em;
+//   justify-content: center;
+//   display: flex;
+//   margin: 60px;
+//   font-weight: bold;
+//   cursor: pointer;
+//   transition: 0.5s ease-in-out;
+// `;
 
 const NoteForm = () => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        "& > :not(style)": {
-          m: 1,
-          width: "100%",
-          height: "500px",
-        },
-      }}
-    >
-      <Paper variant="outlined" square>
-        <Card
-          sx={{
-            margin: "0px 20%",
-            backgroundColor: "#C0C0C0",
-            height: "500px",
-          }}
-        >
-          <form>
-            <InputNoteLabel>Enter Title</InputNoteLabel>
-            <InputNote />
-          </form>
-        </Card>
-      </Paper>
-    </Box>
+    <>
+      <h3>Contact Form</h3>
+
+      <div class="container">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style={{ height: "200px" }}
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </>
   );
 };
 export default NoteForm;

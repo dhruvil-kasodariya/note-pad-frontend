@@ -36,6 +36,8 @@ export const Input = styled.input`
   border-radius: 5px;
 `;
 
+const AuthFormLabel = styled.label``;
+
 const AuthForm = ({
   handleSignUpChange,
   handleSignInChange,
